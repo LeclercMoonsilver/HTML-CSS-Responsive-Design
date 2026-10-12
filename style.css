@@ -1,0 +1,349 @@
+
+/*this guy help delcare variables
+but in here he will be a color palette for the website
+w guy for making thing easier
+*/
+:root {
+    --bg: #f5f0e1;
+    --card: #fffaf0;
+    --primary: #2f5d3a;
+    --accent: #6b9e5a;
+    --border: #1f3d27;
+    --text: #2b2b25; 
+}
+
+
+
+
+
+.banner {
+    img{
+        display: block;
+        border-radius: 10px;
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+    }
+    h1 {
+        text-align: right;
+        font-size: 2.5rem;
+        margin-top: 20px;
+        margin-right: 5%;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+header {
+    position: relative;
+}
+.profile-picture {
+    position: absolute;
+    top: 220px;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    background-color: white;
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 15px;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+    border: 2px solid black;
+    a {
+        text-decoration: none;
+        color: black;
+        margin: 0;
+        padding: 12px 20px;
+        width: auto;
+        height: auto;
+        background-color: rgb(236, 13, 13);
+        border-radius: 10px;
+    }
+}
+
+nav a{
+    transition: background-color 0.3s, transform 0.3s;
+}
+nav a:hover {
+    background-color: rgb(150, 0, 0);
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    h2 {
+        font-size: 35px;
+    }
+    ul {
+        list-style-type: none;
+        margin-top: 10px;
+        li {
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+    }
+    p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
+.education {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    h2 {
+        font-size: 35px;
+    }
+    figure{
+        display: flex;
+        flex-direction: column;
+        
+        border: 2px solid black;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 20px;
+    }
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin-top: 20px;
+    }
+    figcaption {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
+
+.web-Project {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    h2 {
+        font-size: 35px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li{
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        border: 2px solid black;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    figcaption {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        font-size: 20px;
+        margin-top: 10px;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 10px;
+        a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            background-color: rgb(253, 253, 253);
+            padding: 5px;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
+
+/*Color
+now this is where we change colors for the whole website
+*/
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+nav {
+    background-color: var(--card);
+    border-color: var(--border);
+}
+nav a{
+    background-color: var(--primary);
+    color: var(--card);
+}
+nav a:hover {
+    background-color: var(--accent);
+    color: var(--text);
+}
+
+.about-me, .education, .web-Project, .banner {
+    background-color: var(--card);
+    border-color: var(--border);
+}
+
+.education figure, .web-Project li {
+    border-color: var(--border);
+}
+
+/*Hover Effects
+i swear this is cool
+*/
+.web-Project li, .education figure {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.web-Project li:hover, .education figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.web-Project figcaption a{
+    transition: background-color 0.3s, transform 0.3s;
+}
+.web-Project figcaption a:hover {
+    background-color: #ffd6d6;
+
+}
+
+
+
+/*this is the responsive design thingy*/
+
+
+.education .grid, .projects-lists {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.projects-lists li {
+    margin-bottom: 0;
+}
+@media(min-width: 772px) {
+    .education .grid, .projects-lists {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*this thing add feature like smooth scrolll, and some reduce motion and dark mode too*/
+/*added some uhhh auto scroll up button when you reach bottom*/
+
+/*to top button*/
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: #304A2B;
+    color: #fffaf0;
+    cursor: pointer;
+}
+#topBtn:hover {
+    background: var(--accent);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+#topBtn {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/*skip to content link*/
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    text-decoration: none;
+    color: var(--text);
+
+}
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    background: var(--card);
+    padding: 10px;
+    z-index: 200;
+}
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduce-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1a2a1f;
+        --card: #243a2b;
+        --primary: #6b9e5a;
+        --accent: #a8c99a;
+        --border: #0f1a12;
+        --text: #f5f0e1;
+    }
+    nav a { color: #1a2a1f; }
+}
+
+
